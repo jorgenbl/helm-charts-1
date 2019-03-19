@@ -16,8 +16,9 @@ rook:
   fsPersistentVolumeSize: 20Gi
 
 # StorageClass used by other charts to create PersistentVolumeClaims
-rbdStorageClassName: "cord-ceph-rbd"
-fsStorageClassName: "cord-cephfs"
+storage:
+  rbdStorageClassName: "cord-ceph-rbd"
+  fsStorageClassName: "cord-cephfs"
 
 cluster:
   storage:
