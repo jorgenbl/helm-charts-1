@@ -34,7 +34,10 @@ spec:
     - path: {{ .Values.cluster.storage.directory | quote }}
  {{- if not .Values.cluster.storage.useAllNodes }}
     nodes:
- {{- range .Values.cluster.storage.nodes }}
-    - name: {{ . | quote }}
+ {{- range $index, $node := .Values.cluster.storage.nodes }}
+    - name: {{ $node | quote }}
+  {{- if .Values.cluster.storage.nodes[{{ $index }}].deviceFilter }}
+      deviceFilter: {{.Values.cluster.storage.nodes[{{ $index }}].deviceFilter }}
+  {{- end }}
  {{- end }}
  {{- end }}
