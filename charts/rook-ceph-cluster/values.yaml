@@ -1,7 +1,7 @@
 
 image:
   repository: ceph/ceph
-  tag: v14.2.0
+  tag: v14.2
   pullPolicy: Always
   pullSecret: whatever
 # directory on k8s nodes that holds ceph data
