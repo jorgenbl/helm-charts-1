@@ -14,6 +14,7 @@ rook:
   fsName: "cord-ceph-filesystem"
   fsPersistentVolumeName: "cord-cephfs-pv"
   fsPersistentVolumeSize: 20Gi
+  replicated: 3
 
 # StorageClass used by other charts to create PersistentVolumeClaims
 storage:
@@ -21,6 +22,8 @@ storage:
   fsStorageClassName: "cord-cephfs"
 
 cluster:
+  pool:
+    replicated: 3    
   storage:
     retainPolicy: Retain
     useAllNodes: false
