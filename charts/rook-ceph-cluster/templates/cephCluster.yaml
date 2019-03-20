@@ -12,6 +12,7 @@ spec:
   cephVersion:
     # For the latest ceph images, see https://hub.docker.com/r/ceph/ceph/tags
     image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+    allowUnsupported: true
   dataDirHostPath: /var/lib/rook
   serviceAccount: rook-ceph-cluster
   dashboard:
