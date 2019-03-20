@@ -22,7 +22,7 @@ storage:
 
 cluster:
   storage:
-    retainPolicy: Delete
+    retainPolicy: Retain
     useAllNodes: false
     useAllDevices: true
     deviceFilter: {}
