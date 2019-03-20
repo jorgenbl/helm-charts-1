@@ -24,8 +24,8 @@ cluster:
   storage:
     useAllNodes: false
     useAllDevices: true
+    deviceFilter: {}
     directory: "/mnt/ceph"
     nodes:
-      - name: "storage"
-      deviceFilter:
-    deviceFilter:
+    - name: "storage"
+      deviceFilter: {}
