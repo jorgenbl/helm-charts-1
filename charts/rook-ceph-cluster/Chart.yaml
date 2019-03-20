@@ -3,4 +3,4 @@ appVersion: "1.0"
 description: A Helm chart for Kubernetes
 name: rook-ceph-cluster
 icon: https://rook.io/images/logos/rook/rook-logo-color-on-transparent.png
-version: 0.1.0
+version: 0.2.0

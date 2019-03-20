@@ -15,7 +15,7 @@ questions:
     type: string
     label: API Server Image
   - variable: image.tag
-    default: "v13.2.4-20190109"
+    default: "v14.2.0"
     description: "The image tag of Rook Ceph image"
     type: string
     label: Image Tag For Rook Ceph Image
