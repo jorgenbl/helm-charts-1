@@ -35,9 +35,9 @@ spec:
  {{- if not .Values.cluster.storage.useAllNodes }}
     nodes:
  {{- range $index, $node := .Values.cluster.storage.nodes }}
-    - name: {{ $node | quote }}
-  {{- if .Values.cluster.storage.nodes[{{ $index }}].deviceFilter }}
-      deviceFilter: {{.Values.cluster.storage.nodes[{{ $index }}].deviceFilter }}
+    - name: {{ $node.name | quote }}
+  {{- if $node.deviceFilter }}
+      deviceFilter: {{ $node.deviceFilter }}
   {{- end }}
  {{- end }}
  {{- end }}
