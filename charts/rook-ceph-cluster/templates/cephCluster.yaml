@@ -36,7 +36,7 @@ spec:
     nodes:
  {{- range $index, $node := .Values.cluster.storage.nodes }}
     - name: {{ $node.name | quote }}
-  {{- if $node.deviceFilter }}
+  {{- if $node.deviceFilter | quote }}
       deviceFilter: {{ $node.deviceFilter }}
   {{- end }}
  {{- end }}
