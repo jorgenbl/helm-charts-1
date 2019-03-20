@@ -27,3 +27,4 @@ cluster:
     directory: "/mnt/ceph"
     nodes:
       - "storage"
+    deviceFilter:
